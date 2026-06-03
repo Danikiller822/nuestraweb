@@ -1,28 +1,8 @@
 .titulo{
 	text-align: center;
 }
-.seccion1imagenes{
-	 display: flex;
-    gap: 1rem;
 
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-    padding: 1rem;
-}
-.seccion1imagenes img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-
-    flex-shrink: 0;
-    border-radius: 8px;
-
-    scroll-snap-align: center;
-	
-}
-/* small gallery images */
+/* imagenes pequeñas */
 .gallery-img {
     width: 300px;
     height: 200px;
@@ -30,7 +10,7 @@
     border-radius: 8px;
 }
 
-/* horizontal scroll */
+/* scroll */
 .seccion1imagenes {
     display: flex;
     gap: 1rem;
@@ -38,7 +18,7 @@
     padding: 1rem;
 }
 
-/* LIGHTBOX (hidden by default) */
+/* imagenes grandes ocultas */
 .lightbox {
     position: fixed;
     top: 0;
@@ -48,19 +28,21 @@
 
     background: rgba(0,0,0,0.9);
 
-    display: none;
-    justify-content: center;
-    align-items: center;
+    display: none; /*oculto por defecto */
+    justify-content: center; /* alineado horizontal (del contenedor)*/
+    align-items: center; /* alineado vertical */
 }
 
 /* show when targeted */
-.lightbox:target {
-    display: flex;
+.lightbox:target { /* cuando lo targueteas con el # */
+    display: flex; /*quitar el oculto */
 }
 
 /* big image */
 .lightbox img {
-    max-width: 90%;
+    max-width: 90%; /* pa que no haga overflow y se vea en movil tb */
     max-height: 80%;
     border-radius: 10px;
+	display: block;   /* las 2 ultimas pa centrar la imagen en si */
+    margin: auto;
 }

@@ -2,7 +2,42 @@
 	text-align: center;
 }
 
+body {
+    background-image: url("fondo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+/* mierda que se supone que funciona de internet para colorear la scroll bar */
+.seccionimagenes::-webkit-scrollbar {
+    height: 10px;
+}
+
+.seccionimagenes::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.seccionimagenes::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+}
+
+.seccionimagenes::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* centrar los textos y titulos */
+.secciontexto{
+	text-align: center;
+	padding-left: 50px; /*añadir espacio dentro del contenedor */
+    padding-right: 50px;
+}
+
+
 /* imagenes pequeñas */
+
 .gallery-img {
     width: 300px;
     height: 200px;
@@ -16,6 +51,8 @@
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem;
+	justify-content: center; /* alineado horizontal (del contenedor)*/
+    align-items: center;
 }
 
 /* imagenes grandes ocultas */
@@ -37,12 +74,15 @@
 .lightbox:target { /* cuando lo targueteas con el # */
     display: flex; /*quitar el oculto */
 }
-
-/* big image */
 .lightbox img {
-    max-width: 90%; /* pa que no haga overflow y se vea en movil tb */
-    max-height: 80%;
-    border-radius: 10px;
-	display: block;   /* las 2 ultimas pa centrar la imagen en si */
-    margin: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
 }
+

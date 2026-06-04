@@ -47,13 +47,18 @@ body {
     border-radius: 8px;
 }
 
+.wrapper-galeria {
+    display: flex;
+    justify-content: center;
+}
+
 /* scroll */
 .seccionimagenes {
     display: flex;
     gap: 1rem;
     overflow-x: auto;
     padding: 1rem;
-	justify-content: center; /* alineado horizontal (del contenedor)*/
+	justify-content: flex-start; /* alineado horizontal (del contenedor)*/
     align-items: center;
 	margin-bottom:125px; /* pa dejar hueco entre parte y parte */
 }

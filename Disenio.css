@@ -33,7 +33,7 @@ body {
 	text-align: center;
 	padding-left: 50px; /*añadir espacio dentro del contenedor */
     padding-right: 50px;
-	margin-top: 125px; /* pa dejar hueco entre parte y parte */
+	margin-top: 100px; /* pa dejar hueco entre parte y parte */
 	margin-bottom: 10px;
 }
 
@@ -60,7 +60,7 @@ body {
     padding: 1rem;
 	justify-content: flex-start; /* alineado horizontal (del contenedor)*/
     align-items: center;
-	margin-bottom:125px; /* pa dejar hueco entre parte y parte */
+	margin-bottom:100px; /* pa dejar hueco entre parte y parte */
 }
 
 /* imagenes grandes ocultas */
